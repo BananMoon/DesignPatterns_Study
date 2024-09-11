@@ -121,7 +121,7 @@ public enum Settings {
 - 팩토리 인터페이스 안에 구현부 (default method) 및 하위클래스에서 작성해야하는 메서드의 경우 구현부는 없는 형태로 생성한다. -> `Creator` 인터페이스
 - 그리고 구현체에서 인터페이스를 구현하면서 그 구현체에 맞게 메서드들을 구현한다.   -> `ConcreteCreator` 클래스
 - 생성 대상이 되는 객체도 인터페이스로 생성하고, 이를 구현하도록 한다.   -> `Product` 인터페이스와 `ConcreteProduct` 클래스
-- 결국 팩토리 인터페이스의 구현체가 인터페이스 객체의 구현체인 객체를 생성하게 된다.  -> `ConcreteCreator` 클래스가 `ConcreteProduct` 클래스를 생성한다.
+- 팩토리 인터페이스의 구현체가 인터페이스 객체의 구현체인 객체를 생성하게 된다.  -> `ConcreteCreator` 클래스가 `ConcreteProduct` 클래스를 생성한다.
 
 예제 : Ship, ShipFactory
 제품 군에도, 생성 클래스에도 게층 구조로 생성한다. (추상 클래스 하위에 상속 클래스를 만들거나, 인터페이스 하위에 구현체를 만든다.)
