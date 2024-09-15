@@ -14,7 +14,7 @@ import java.util.Locale;
  * Creator는 Calendar (추상 클래스). Concrea GregorianCalendar 클래스
  */
 @Slf4j
-public class CalenderExample {
+public class JavaExample {
     public static void main(String[] args) {
         // Calendar
         Calendar product = Calendar.getInstance();
