@@ -1,4 +1,4 @@
-package moonz.study.designpatterns.creation.good;
+package moonz.study.designpatterns.creation.factorymethodpattern.good;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

@@ -1,4 +1,4 @@
-package moonz.study.designpatterns.creation.good;
+package moonz.study.designpatterns.creation.factorymethodpattern.good;
 
 public class WhiteShip extends Ship {
     public WhiteShip(String name) {
