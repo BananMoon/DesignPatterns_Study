@@ -147,3 +147,25 @@ public enum Settings {
 - 자바 9에서는 인터페이스에 private 메서드 선언 가능한 기능이 추가되었음.
 
 ### 실무에서는?
+- Java의 Calendar
+- Java의 NumberFormat
+- Spring의 BeanFactory
+
+### 3) Abstract Factory Pattern 추상 팩토리 패턴
+클라이언트 입장에서 인스턴스를 만드는 팩토리 역할의 클래스를 추상적인 "인터페이스 혹은 추상 클래스"를 사용하도록 하는 패턴. 
+팩토리 관점에서는 팩토리 메서드 패턴과 동일하지만, 클라이언트 관점에 더 집중한다.
+
+Ex) WhiteshipFactory라는 Whiteship 을 만드는 팩토리가 있을 때, `createShip()` 메서드에서 anchor와 wheel 인스턴스를 각각 생성해서 배를 만들텐데 
+만약 새로운 anchor와 wheel이 나오면, 그때마다 코드가 수정되어야 할 것이다. WhiteAnchor -> NewWhiteAnchor
+추상 팩토리 패턴을 이용해 구체적인 클래스 (`WhiteAnchor`, `WhiteWheel`)에 의존하지 않게끔하여 위와 같은 문제를 개선할 수 있다.
+```java
+public class WhiteshipFactory extends DefaultShipFactory { 
+    @Override 
+    public Ship createShip() {
+        Ship ship = new WhiteShip();
+        ship.setAnchor(new WhiteAnchor());  // 구체적인 클래스에 의존.
+        ship.setWheel(new WhiteWheel());
+        return ship;
+    }
+}
+```

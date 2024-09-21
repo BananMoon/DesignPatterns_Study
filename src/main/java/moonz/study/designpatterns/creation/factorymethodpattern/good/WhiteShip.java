@@ -1,6 +1,12 @@
 package moonz.study.designpatterns.creation.factorymethodpattern.good;
 
 public class WhiteShip extends Ship {
+    public WhiteShip() {
+        this.name = "Whiteship";
+        this.color = ShipColorType.WHITE;
+        this.logo = "\uD83D\uDEE5️";
+    }
+
     public WhiteShip(String name) {
         this.name = name;
         this.color = ShipColorType.WHITE;
